@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane hgap="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.map2223.knnClient.controller.PreferencesController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefWidth="400.0" spacing="15.0" GridPane.columnIndex="1">
+         <children>
+            <Text fill="#04395e" strokeType="OUTSIDE" strokeWidth="0.0" text="Impostazioni">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="enableWelcome" mnemonicParsing="false" selected="true" text="Mostra schermata di benvenuto ">
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </CheckBox>
+            <VBox prefHeight="126.0" prefWidth="400.0" spacing="15.0" style="-fx-background-color: ffdba1;">
+               <children>
+                  <Text fill="#04395e" strokeType="OUTSIDE" strokeWidth="0.0" text="Connesione">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+                     <children>
+                        <TextField fx:id="serverAddress" alignment="BASELINE_RIGHT" prefHeight="27.0" prefWidth="194.0">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="162.0" text="Indirizzo Server">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="52.0" nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+                     <children>
+                        <TextField fx:id="portNumber" alignment="BASELINE_RIGHT" prefHeight="27.0" prefWidth="194.0">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="162.0" text="Numero di Porta">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <HBox fx:id="actionParent" alignment="CENTER" />
+            <Pane maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <Button fx:id="cancelButton" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#onCancelBtnPressed" style="-fx-background-color: #04395e;" text="Cancel" textFill="WHITE" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <HBox fx:id="okParent" alignment="CENTER">
+               <children>
+                  <Button fx:id="saveButton" minWidth="80.0" mnemonicParsing="false" onAction="#onSaveBtnPressed" style="-fx-background-color: #f9a826;" text="Save" textFill="#04395e">
+                     <HBox.margin>
+                        <Insets left="14.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</GridPane>
